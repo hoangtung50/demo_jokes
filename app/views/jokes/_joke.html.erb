@@ -1,0 +1,8 @@
+<h3>
+  <%= @joke.content %>
+</h3>
+
+<%= link_to "Like", { :controller => :jokes, :action => :create, like: true, joke_id: @joke.id, user_id: session[:user_id] },
+            class: "btn btn-large btn-primary",method: :post, remote: true%>
+<%= link_to "Dislike", { :controller => :jokes, :action => :create, like: false, joke_id: @joke.id, user_id: session[:user_id] } ,
+            class: "btn btn-large btn-primary", method: :post, remote: true%>

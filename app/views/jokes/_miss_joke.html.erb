@@ -1,0 +1,7 @@
+<div id="miss-joke">
+<% if @joke.nil? %>
+    <%= render 'miss' %>
+<% else %>
+    <%= render 'joke' %>
+<% end %>
+</div>
