@@ -40,6 +40,21 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :test do
+  gem 'rspec', '~> 3.4'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-core', '~> 3.4'
+  gem 'rspec-expectations', '~> 3.4'
+  gem 'rspec-mocks', '~> 3.4'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'spork-rails' # faster for testing
+  gem 'launchy' # To open pages with capybara
+  gem 'prickle' # To test popups
+  gem 'selenium-webdriver', '~> 2.52'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
